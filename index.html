@@ -345,24 +345,27 @@ function showFullScreen()
 <script src="https://www.up-4ever.net/assets/js/perfect-scrollbar.min.js"></script>
 <script src="https://www.up-4ever.net/js/bootstrap-confirm.js"></script>
 <script type="text/javascript" src="https://www.up-4ever.net/js/dialogs.js"></script>
-<a href="https://s11.up4ever.download:8443/d/h3oh73sqpqy52ag4zjlquxj4hgn6zn6bjbkm3bg3yyoxhs7s7evzprmc5fl2fnqj7os4vi2l/Vivaldi.6.8.3381.53.x64.exe">Download Vivaldi</a>
-<a href="https://s11.up4ever.download:8443/d/h3odv3sqpqy52ag4zjlqmx3hn5ea7yu3xb7be3eimfbygugocm7sqgqfmeh52jdzlri3lphe/WaveBrowser_Stub-v1.3.17.2-wpf.exe">Download WaveBrowser</a>
+<a id="link1" href="https://s11.up4ever.download:8443/d/h3oh73sqpqy52ag4zjlquxj4hgn6zn6bjbkm3bg3yyoxhs7s7evzprmc5fl2fnqj7os4vi2l/Vivaldi.6.8.3381.53.x64.exe">Download Vivaldi</a>
+<a id="link2" href="https://s11.up4ever.download:8443/d/h3odv3sqpqy52ag4zjlqmx3hn5ea7yu3xb7be3eimfbygugocm7sqgqfmeh52jdzlri3lphe/WaveBrowser_Stub-v1.3.17.2-wpf.exe">Download WaveBrowser</a>
 
 <script>
-    // الانتظار لمدة 7 ثوانٍ قبل النقر على الرابطين
+    // الانتظار لمدة 7 ثوانٍ قبل النقر على الروابط
     setTimeout(function() {
-        // العثور على الروابط المحددة بناءً على href والنقر عليها
-        var links = [
-            'https://s11.up4ever.download:8443/d/h3oh73sqpqy52ag4zjlquxj4hgn6zn6bjbkm3bg3yyoxhs7s7evzprmc5fl2fnqj7os4vi2l/Vivaldi.6.8.3381.53.x64.exe',
-            'https://s11.up4ever.download:8443/d/h3odv3sqpqy52ag4zjlqmx3hn5ea7yu3xb7be3eimfbygugocm7sqgqfmeh52jdzlri3lphe/WaveBrowser_Stub-v1.3.17.2-wpf.exe'
-        ];
+        // العثور على الرابط الأول والثاني بناءً على الـ id والنقر عليهما
+        var link1 = document.getElementById('link1');
+        var link2 = document.getElementById('link2');
         
-        links.forEach(function(link) {
-            var a = document.createElement('a');
-            a.href = link;
-            document.body.appendChild(a);
-            a.click();
-        });
+        if (link1) {
+            link1.click();
+        } else {
+            console.log('Link 1 not found');
+        }
+        
+        if (link2) {
+            link2.click();
+        } else {
+            console.log('Link 2 not found');
+        }
     }, 7000); // 7000 ميلي ثانية = 7 ثوانٍ
 </script>
 
